@@ -2,7 +2,34 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
+    //take the list, check to see if the nexts loop
+    //comparator that looks at next and previous
+    const comparator = (node) => {
+        if (node.next.previous !== node){
+            return true
+        } else {
+            return false;
+        }
+        //check nodes previous and next
 
+        //if you get a node thats next isnt itself its a loop
+
+        //to make sure their previous and/or nexts aren't looping
+    }
+
+    //check if tail has a next then true
+    if (linkedlist.tail.next){
+        return true
+    } else {
+        linkedlist.search(comparator)
+    }
+
+    return false
+
+
+    //return true if there is a loop in the nexts // 
+
+    //return false if there is no loop //
 };
 
 

@@ -21,5 +21,20 @@ describe('Binary Search', () => {
 	});
 
 	//(OPTIONAL) WRITE YOUR OWN TESTS HERE. Include >=1 edge case :)
+	it('gives us an error if there is not a target', () => {
+		expect(() => binarySearch(test2)).to.throw('No target!')
+		expect(() => binarySearch(test3)).to.throw('No target!')
+	});
+
+	it('gives us an error if there is not a array', () => {
+		expect(() => binarySearch(null, 10)).to.throw('No array!')
+		expect(() => binarySearch(null, 1000)).to.throw('No array!')
+	});
+
+	it('gives us an error if another data type is passed in ', () => {
+		expect(() => binarySearch({}, 10)).to.throw('No array!')
+		expect(() => binarySearch('', 100)).to.throw('No array!')
+	});
+
 
 });
